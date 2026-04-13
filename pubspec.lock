@@ -123,6 +123,7 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+<<<<<<< HEAD
   flutter_web_plugins:
     dependency: transitive
     description: flutter
@@ -136,6 +137,8 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "17.2.1"
+=======
+>>>>>>> 7c44baa (make fonts)
   image:
     dependency: transitive
     description:
