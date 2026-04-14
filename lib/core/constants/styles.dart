@@ -16,6 +16,7 @@ abstract class Styles {
     fontSize: 30,
     fontWeight: FontWeight.w400,
     fontFamily: AppFonts.kCairoFont,
+    color: AppColors.whiteColor,
     // fontFamily: AppFonts.kMontseratFont,
   );
   static const textStyleMedium14 = TextStyle(
