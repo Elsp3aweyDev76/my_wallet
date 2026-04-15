@@ -4,6 +4,7 @@ import 'package:my_wallet/core/constants/styles.dart';
 class CustomTextFormField extends StatelessWidget {
   const CustomTextFormField({
     super.key,
+    this.filled = false,
     this.textInputAction,
     this.thelabel,
     this.validator,
@@ -16,6 +17,7 @@ class CustomTextFormField extends StatelessWidget {
     this.onSaved,
     this.onChanged,
     this.obscureText = false,
+    this.colorOfFill = Colors.transparent,
     decoration,
     keyboardType,
   });
@@ -27,10 +29,11 @@ class CustomTextFormField extends StatelessWidget {
   final EdgeInsetsGeometry? thePadding;
   final void Function(String?)? onSaved;
   final void Function(String?)? onChanged;
-  final bool obscureText;
+  final bool obscureText, filled;
   final TextEditingController? controller;
   final String? thelabel;
   final TextInputAction? textInputAction;
+  final Color colorOfFill;
 
   // التعديل الأساسي: استخدام String? لتمكين إرجاع null عند نجاح التحقق
   final String? Function(String?)? validator;
@@ -41,9 +44,11 @@ class CustomTextFormField extends StatelessWidget {
       padding: thePadding ?? const EdgeInsets.symmetric(horizontal: 16),
 
       child: TextFormField(
+        style: Styles.textStyleRegular30.copyWith(fontSize: 18),
         onChanged: onChanged,
         controller: controller,
         obscureText: obscureText,
+        obscuringCharacter: '●', // هنا نحدد شكل الدائرة يدوياً
         onSaved: onSaved,
         keyboardType: textType,
         textInputAction: TextInputAction.next,
@@ -73,8 +78,8 @@ class CustomTextFormField extends StatelessWidget {
           suffixIcon: suffixIcon,
 
           // التصميم المطلوب: بدون لون خلفية (شفاف)
-          filled: false,
-
+          filled: filled,
+          fillColor: colorOfFill,
           // إعدادات الحدود (Borders) لتطابق الصورة
           enabledBorder: buildBorder(color: Colors.grey.shade400),
           // focusedBorder: buildBorder(color: AppColors.blackColor, width: 2),
