@@ -145,7 +145,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(16),
                 borderSide: BorderSide(
-                  color: Constants.kPrimaryOrange.withOpacity(0.3),
+                  color: Constants.kPrimaryOrange.withValues(alpha: 0.3),
                 ),
               ),
               focusedBorder: OutlineInputBorder(

@@ -1,8 +1,8 @@
 import 'package:go_router/go_router.dart';
 import 'package:my_wallet/core/constants/constants.dart';
-import 'package:my_wallet/features/login/login_screen.dart';
+import 'package:my_wallet/features/home/home_page_view.dart';
+import 'package:my_wallet/features/login/login_page.dart';
 import 'package:my_wallet/features/login/widget/forget_password.dart';
-import 'package:my_wallet/features/splash/home_page.dart';
 
 final router = GoRouter(
   routes: [
@@ -16,7 +16,7 @@ final router = GoRouter(
     ),
     GoRoute(
       path: Constants.kHomeView,
-      builder: (context, state) => const HomePage(),
+      builder: (context, state) => const HomePageView(),
     ),
   ],
 );

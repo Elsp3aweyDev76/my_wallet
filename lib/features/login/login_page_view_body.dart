@@ -72,8 +72,8 @@ class _LoginPageViewBodyState extends State<LoginPageViewBody> {
           height: 55,
           child: ElevatedButton(
             onPressed: () {
-              // نستخدم .go لكي لا يتمكن المستخدم من العودة لشاشة تسجيل الدخول بعد الدخول
               GoRouter.of(context).go(Constants.kHomeView);
+              // نستخدم .go لكي لا يتمكن المستخدم من العودة لشاشة تسجيل الدخول بعد الدخول
             },
             style: ElevatedButton.styleFrom(
               backgroundColor: primaryColor,
