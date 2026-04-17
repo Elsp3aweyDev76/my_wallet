@@ -40,63 +40,59 @@ class CustomTextFormField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: thePadding ?? const EdgeInsets.symmetric(horizontal: 16),
-
-      child: TextFormField(
-        style: Styles.textStyleRegular30.copyWith(fontSize: 18),
-        onChanged: onChanged,
-        controller: controller,
-        obscureText: obscureText,
-        obscuringCharacter: '●', // هنا نحدد شكل الدائرة يدوياً
-        onSaved: onSaved,
-        keyboardType: textType,
-        textInputAction: TextInputAction.next,
-
-        // التحقق من البيانات
-        validator:
-            validator ??
-            (value) {
-              if (value == null || value.isEmpty) {
-                return "field is required";
-              }
-              return null;
-            },
-
-        decoration: InputDecoration(
-          // نصوص الحقل
-          labelText: thelabel,
-          hintText: theHintText,
-          labelStyle: Styles.textStyleRegular30.copyWith(fontSize: 16),
-          hintStyle: Styles.textStyleRegular30.copyWith(
-            fontSize: 18,
-            color: Colors.grey,
-          ),
-
-          // الأيقونات (تظهر كما في صورتك الثانية)
-          prefixIcon: preffixIcon,
-          suffixIcon: suffixIcon,
-
-          // التصميم المطلوب: بدون لون خلفية (شفاف)
-          filled: filled,
-          fillColor: colorOfFill,
-          // إعدادات الحدود (Borders) لتطابق الصورة
-          enabledBorder: buildBorder(color: Colors.grey.shade400),
-          // focusedBorder: buildBorder(color: AppColors.blackColor, width: 2),
-          focusedBorder: buildBorder(
-            color: const Color.fromARGB(255, 63, 36, 36),
-            width: 2,
-          ),
-
-          // إعدادات حالة الخطأ
-          errorBorder: buildBorder(color: Colors.red),
-          focusedErrorBorder: buildBorder(color: Colors.red, width: 2),
-
-          // تنسيق المسافات الداخلية
-          contentPadding: const EdgeInsets.symmetric(
-            vertical: 16,
-            horizontal: 12,
-          ),
+    return TextFormField(
+      style: Styles.textStyleRegular30.copyWith(fontSize: 18),
+      onChanged: onChanged,
+      controller: controller,
+      obscureText: obscureText,
+      obscuringCharacter: '●', // هنا نحدد شكل الدائرة يدوياً
+      onSaved: onSaved,
+      keyboardType: textType,
+      textInputAction: TextInputAction.next,
+    
+      // التحقق من البيانات
+      validator:
+          validator ??
+          (value) {
+            if (value == null || value.isEmpty) {
+              return "field is required";
+            }
+            return null;
+          },
+    
+      decoration: InputDecoration(
+        // نصوص الحقل
+        labelText: thelabel,
+        hintText: theHintText,
+        labelStyle: Styles.textStyleRegular30.copyWith(fontSize: 16),
+        hintStyle: Styles.textStyleRegular30.copyWith(
+          fontSize: 18,
+          color: Colors.grey,
+        ),
+    
+        // الأيقونات (تظهر كما في صورتك الثانية)
+        prefixIcon: preffixIcon,
+        suffixIcon: suffixIcon,
+    
+        // التصميم المطلوب: بدون لون خلفية (شفاف)
+        filled: filled,
+        fillColor: colorOfFill,
+        // إعدادات الحدود (Borders) لتطابق الصورة
+        enabledBorder: buildBorder(color: Colors.grey.shade400),
+        // focusedBorder: buildBorder(color: AppColors.blackColor, width: 2),
+        focusedBorder: buildBorder(
+          color: const Color.fromARGB(255, 63, 36, 36),
+          width: 2,
+        ),
+    
+        // إعدادات حالة الخطأ
+        errorBorder: buildBorder(color: Colors.red),
+        focusedErrorBorder: buildBorder(color: Colors.red, width: 2),
+    
+        // تنسيق المسافات الداخلية
+        contentPadding: const EdgeInsets.symmetric(
+          vertical: 16,
+          horizontal: 12,
         ),
       ),
     );

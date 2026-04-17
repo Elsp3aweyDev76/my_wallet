@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:my_wallet/core/constants/constants.dart';
+import 'package:my_wallet/core/routing/go_router.dart';
 
 class HomePageView extends StatelessWidget {
   const HomePageView({super.key});
@@ -17,7 +17,7 @@ class HomePageView extends StatelessWidget {
           children: [
             TextButton(
               onPressed: () {
-                GoRouter.of(context).push(Constants.kLoginView);
+                GoRouter.of(context).push(kLoginView);
               },
               child: Text("Sign out "),
             ),
