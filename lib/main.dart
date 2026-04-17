@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'myWallet',
       theme: ThemeData(colorScheme: .fromSeed(seedColor: Colors.deepPurple)),
       home: const HomePage(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
