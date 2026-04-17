@@ -6,6 +6,9 @@ class LoginPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return LoginPageViewBody();
+    return Scaffold(
+      backgroundColor: Colors.transparent,
+      body: SafeArea(child: LoginPageViewBody()),
+    );
   }
 }

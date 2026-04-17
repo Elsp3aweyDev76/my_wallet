@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_wallet/features/splash/home_page.dart';
+import 'package:my_wallet/core/routing/go_router.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,10 +11,11 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
+      routerConfig: router,
       title: 'myWallet',
       theme: ThemeData(colorScheme: .fromSeed(seedColor: Colors.deepPurple)),
-      home: const HomePage(),
+      // home: const HomePage(),
       debugShowCheckedModeBanner: false,
     );
   }
