@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:my_wallet/core/constants/constants.dart';
 import 'package:my_wallet/features/login/login_screen.dart';
 
 class HomePageBody extends StatelessWidget {
@@ -9,7 +8,6 @@ class HomePageBody extends StatelessWidget {
   Widget build(BuildContext context) {
     // return const LoginScreen();
     return Scaffold(
-      backgroundColor: AppColors.blackColor,
       body: SafeArea(child: LoginPage()),
     );
   }

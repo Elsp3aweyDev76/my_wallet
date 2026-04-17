@@ -14,7 +14,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp.router(
       routerConfig: router,
       title: 'myWallet',
-      theme: ThemeData(colorScheme: .fromSeed(seedColor: Colors.deepPurple)),
+      theme: ThemeData(
+        brightness: Brightness.dark,
+        scaffoldBackgroundColor: Colors.black, // 👈 حدد اللون الأسود الصريح هنا
+        // تأكد من ضبط الألوان الأخرى لتناسب هويتك البرتقالية
+        primaryColor: const Color(0xFFFF6B2C),
+      ),
       // home: const HomePage(),
       debugShowCheckedModeBanner: false,
     );

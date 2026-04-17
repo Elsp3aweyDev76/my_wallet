@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:my_wallet/core/constants/constants.dart';
 import 'package:my_wallet/core/constants/styles.dart';
 import 'package:my_wallet/core/utils/custom_text_field.dart';
 
@@ -51,7 +52,7 @@ class _LoginPageViewBodyState extends State<LoginPageViewBody> {
           alignment: AlignmentGeometry.centerRight,
           child: TextButton(
             onPressed: () {
-              GoRouter.of(context).push("/forget_password");
+              GoRouter.of(context).push(Constants.kForgetPasswordView);
               // Navigator.push(
               //   context,
               //   MaterialPageRoute(builder: (context) => const ForgetPassword()),
