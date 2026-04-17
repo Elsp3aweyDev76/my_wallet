@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:my_wallet/core/constants/constants.dart';
 import 'package:my_wallet/core/constants/styles.dart';
 import 'package:my_wallet/core/utils/custom_text_field.dart';
-import 'package:my_wallet/features/login/widget/forget_password.dart';
 
 class LoginPageViewBody extends StatefulWidget {
   const LoginPageViewBody({super.key});
@@ -51,10 +52,11 @@ class _LoginPageViewBodyState extends State<LoginPageViewBody> {
           alignment: AlignmentGeometry.centerRight,
           child: TextButton(
             onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const ForgetPassword()),
-              );
+              GoRouter.of(context).push(Constants.kForgetPasswordView);
+              // Navigator.push(
+              //   context,
+              //   MaterialPageRoute(builder: (context) => const ForgetPassword()),
+              // );
             },
             child: Text("Forget Password?"),
           ),

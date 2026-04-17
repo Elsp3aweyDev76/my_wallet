@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_wallet/core/constants/constants.dart';
-
+import 'package:my_wallet/core/utils/custom_text_field.dart';
 
 class ForgetPassword extends StatefulWidget {
   const ForgetPassword({super.key});
@@ -60,13 +60,16 @@ class _ForgetPasswordState extends State<ForgetPassword> {
 
             // --- تغيير الواجهة بناءً على الخطوة الحالية ---
             if (!isStepTwo) ...[
-              _buildInputLabel("البريد الإلكتروني"),
-              _buildTextField(
-                hint: "name@email.com",
-                icon: Icons.alternate_email,
+              CustomTextFormField(
+                thelabel: "Email",
+                theHintText: "name@email.com",
+                preffixIcon: Icon(
+                  Icons.alternate_email,
+                  color: Constants.kPrimaryOrange,
+                ),
               ),
             ] else ...[
-              _buildInputLabel("رمز التحقق (OTP)"),
+              Text("رمز التحقق (OTP)"),
               _buildOTPFields(), // ويدجت مربعات الرمز
             ],
 
@@ -116,36 +119,6 @@ class _ForgetPasswordState extends State<ForgetPassword> {
   }
 
   // --- مساعدات بناء الواجهة (Helpers) ---
-
-  Widget _buildInputLabel(String label) {
-    return Padding(
-      padding: EdgeInsets.only(bottom: 10.0),
-      child: Text(
-        label,
-        style: TextStyle(
-          color: Constants.kPureWhite,
-          fontWeight: FontWeight.w500,
-        ),
-      ),
-    );
-  }
-
-  Widget _buildTextField({required String hint, required IconData icon}) {
-    return TextField(
-      style: TextStyle(color: Constants.kPureWhite),
-      decoration: InputDecoration(
-        filled: true,
-        fillColor: Constants.kCardNavy,
-        hintText: hint,
-        hintStyle: const TextStyle(color: Colors.white24),
-        prefixIcon: Icon(icon, color: Constants.kPrimaryOrange, size: 20),
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(16),
-          borderSide: BorderSide.none,
-        ),
-      ),
-    );
-  }
 
   // مربعات الرمز OTP بنمط عصري
   Widget _buildOTPFields() {
