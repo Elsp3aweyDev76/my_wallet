@@ -1,11 +1,11 @@
+import 'package:flutter/material.dart';
 
 const knumberOfPadding = 16.0;
 
 class Constants {
   // constants of colors
-static const knumberOfPadding = 20.0;
+  static const knumberOfPadding = 20.0;
 
-class Constants {
   // constants of colors
 
   static const Color blackColor = Colors.black;
@@ -20,7 +20,6 @@ class Constants {
   static const kLoginView = '/';
   static const kForgetPasswordView = '/forgetPassword';
   static const kHomeView = '/home';
-
 }
 
 class AppColors {

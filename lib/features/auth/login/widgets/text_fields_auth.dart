@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:my_wallet/core/services/validator.dart';
+import 'package:my_wallet/core/helpers/validator.dart';
 import 'package:my_wallet/core/utils/custom_text_field.dart';
-import 'package:my_wallet/features/auth/logic/authcubit/auth_cubit.dart';
-import 'package:my_wallet/features/auth/logic/authcubit/auth_cubit_state.dart';
+import 'package:my_wallet/features/auth/logic/auth_cubit.dart';
+import 'package:my_wallet/features/auth/logic/auth_cubit_state.dart';
 
 class TextFieldsAuth {
   // for Name
