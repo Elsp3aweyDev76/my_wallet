@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-const knumberOfPadding = 20;
+const knumberOfPadding = 16.0;
 
 class Constants {
   // constants of colors
@@ -12,10 +12,6 @@ class Constants {
   static const Color kCardNavy = Color(0xFF121212);
   static const Color kPureWhite = Color(0xFFFFFFFF);
   static const Color kTextSecondary = Color(0xFF9E9E9E);
-  // constants of screens
-  static const kLoginView = '/';
-  static const kForgetPasswordView = '/forgetPassword';
-  static const kHomeView = '/home';
 }
 
 class AppColors {
