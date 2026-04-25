@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 class FireBaseFunction {
   FirebaseAuth auth = FirebaseAuth.instance;
-  Future<User?>? loginUser(String email, String password) async {
+  Future<User?> loginUser(String email, String password) async {
     try {
       UserCredential userCredential = await auth.signInWithEmailAndPassword(
         email: email,
@@ -19,6 +19,7 @@ class FireBaseFunction {
     }
     return null;
   }
+
   Future<User?> signUpUser(String email, String password) async {
     try {
       UserCredential userCredential = await auth.createUserWithEmailAndPassword(
@@ -30,7 +31,9 @@ class FireBaseFunction {
       if (e.code == 'weak-password') {
         throw SnackBar(content: Text("The password provided is too weak."));
       } else if (e.code == 'email-already-in-use') {
-        throw SnackBar(content: Text("The account already exists for that email."));
+        throw SnackBar(
+          content: Text("The account already exists for that email."),
+        );
       }
     }
     return null;
