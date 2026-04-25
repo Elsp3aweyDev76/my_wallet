@@ -12,6 +12,10 @@ class Constants {
   static const Color kCardNavy = Color(0xFF121212);
   static const Color kPureWhite = Color(0xFFFFFFFF);
   static const Color kTextSecondary = Color(0xFF9E9E9E);
+  // constants of screens
+  static const kLoginView = '/';
+  static const kForgetPasswordView = '/forgetPassword';
+  static const kHomeView = '/home';
 }
 
 class AppColors {
