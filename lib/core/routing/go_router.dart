@@ -39,10 +39,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:my_wallet/core/networking/fire_base_function.dart';
 import 'package:my_wallet/features/auth/logic/authcubit/auth_cubit.dart';
+import 'package:my_wallet/features/auth/login/login_page.dart';
 import 'package:my_wallet/features/auth/login/widgets/forget_password.dart';
 import 'package:my_wallet/features/auth/signUp/sign_up.dart';
 import 'package:my_wallet/features/home/home_page_view.dart';
-import 'package:my_wallet/features/login/login_screen.dart';
 
 // constants of screens
 const kLoginView = '/';

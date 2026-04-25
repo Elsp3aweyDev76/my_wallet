@@ -26,6 +26,8 @@ class CosutmButton extends StatelessWidget {
       child: Container(
         height: height ?? 50,
         width: width ?? double.infinity,
+        height: 50,
+        width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(
           color: theColor,
           borderRadius: BorderRadius.circular(16),
@@ -41,6 +43,7 @@ class CosutmButton extends StatelessWidget {
                   title,
                   style: TextStyle(
                     fontSize: fontSize ?? 18,
+                    fontSize: 25,
                     fontWeight: FontWeight.w500,
                     color: fontColor,
                   ),

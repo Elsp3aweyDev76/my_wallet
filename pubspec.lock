@@ -208,6 +208,7 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "17.2.1"
+<<<<<<< HEAD
   http:
     dependency: transitive
     description:
@@ -224,6 +225,8 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.1.2"
+=======
+>>>>>>> 4a0215fd09b176e75c35d8a815b727cfdab0c634
   image:
     dependency: transitive
     description:
