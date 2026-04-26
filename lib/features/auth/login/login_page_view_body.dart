@@ -68,7 +68,7 @@ class LoginPageViewBody extends StatelessWidget {
                     title: 'Login',
                   ),
 
-                  // --- فاصل "أو" (Divider) ---
+                  // --- (Divider) ---
                   Row(
                     spacing: 5,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -81,9 +81,7 @@ class LoginPageViewBody extends StatelessWidget {
 
                   // --- زر تسجيل الدخول عبر جوجل ---
                   OutlinedButton.icon(
-                    onPressed: () {
-                      // منطق تسجيل الدخول عبر جوجل سيوضع هنا لاحقاً
-                    },
+                    onPressed: () {},
                     icon: const Icon(
                       Icons.g_mobiledata,
                       size: 30,
