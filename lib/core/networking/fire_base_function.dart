@@ -38,10 +38,4 @@ class FireBaseFunction {
     }
     return null;
   }
-  Future logout() async {
-    await auth.signOut();
-  }
-  User? currnetUser(){
-    return auth.currentUser;
-  }
 }

@@ -11,6 +11,7 @@ class Constants {
   static const Color blackColor = Colors.black;
   static const Color greyColor = Colors.grey;
   static const Color kPrimaryOrange = Color(0xFFFF6B2C);
+  static const Color kredColor = Colors.red;
   static const Color kAccentYellow = Color(0xFFFDBB2D);
   static const Color kPureBlackBG = Color(0xFF000000);
   static const Color kCardNavy = Color(0xFF121212);
