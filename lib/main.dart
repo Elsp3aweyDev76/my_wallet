@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart'; // 1. أضف استيراد FirebaseAuth
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:my_wallet/core/routing/go_router.dart';
+import 'package:my_wallet/features/home/home_page_view.dart';
 import 'package:my_wallet/firebase_options.dart';
 
 void main() async {
@@ -25,9 +25,21 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
+    // return MaterialApp.router(
+    //   // 4. تأكد أن ملف go_router.dart يستقبل isLoggedIn لتحديد المسار الابتدائي
+    //   routerConfig: AppRouter.createRouter(isLoggedIn),
+    //   title: 'myWallet',
+    //   theme: ThemeData(
+    //     brightness: Brightness.dark,
+    //     scaffoldBackgroundColor: Colors.black,
+    //     primaryColor: const Color(0xFFFF6B2C),
+    //   ),
+    //   debugShowCheckedModeBanner: false,
+    // );
+    //////////////////
+    return MaterialApp(
       // 4. تأكد أن ملف go_router.dart يستقبل isLoggedIn لتحديد المسار الابتدائي
-      routerConfig: AppRouter.createRouter(isLoggedIn),
+      // routerConfig: AppRouter.createRouter(isLoggedIn),
       title: 'myWallet',
       theme: ThemeData(
         brightness: Brightness.dark,
@@ -35,6 +47,7 @@ class MyApp extends StatelessWidget {
         primaryColor: const Color(0xFFFF6B2C),
       ),
       debugShowCheckedModeBanner: false,
+      home: HomePageView(),
     );
   }
 }
