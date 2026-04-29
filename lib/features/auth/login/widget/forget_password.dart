@@ -15,14 +15,14 @@ class _ForgetPasswordState extends State<ForgetPassword> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Constants.kPureBlackBG,
+      backgroundColor: AppColors.kPureBlackBG,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
         leading: IconButton(
           icon: Icon(
             Icons.arrow_back_ios_new,
-            color: Constants.kPureWhite,
+            color: AppColors.kPureWhite,
             size: 20,
           ),
           onPressed: () => Navigator.pop(context),
@@ -41,7 +41,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
               style: TextStyle(
                 fontSize: 28,
                 fontWeight: FontWeight.bold,
-                color: Constants.kPureWhite,
+                color: AppColors.kPureWhite,
               ),
             ),
             const SizedBox(height: 12),
@@ -51,7 +51,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                   : "لا تقلق، أدخل بريدك الإلكتروني وسنرسل لك رمزاً لإعادة تعيين كلمة المرور.",
               style: TextStyle(
                 fontSize: 15,
-                color: Constants.kTextSecondary,
+                color: AppColors.kTextSecondary,
                 height: 1.5,
               ),
             ),
@@ -65,7 +65,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                 theHintText: "name@email.com",
                 preffixIcon: Icon(
                   Icons.alternate_email,
-                  color: Constants.kPrimaryOrange,
+                  color: AppColors.kPrimaryOrange,
                 ),
               ),
             ] else ...[
@@ -86,7 +86,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                   });
                 },
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Constants.kPrimaryOrange,
+                  backgroundColor: AppColors.kPrimaryOrange,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(16),
                   ),
@@ -96,7 +96,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                   style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
-                    color: Constants.kPureWhite,
+                    color: AppColors.kPureWhite,
                   ),
                 ),
               ),
@@ -108,7 +108,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                   onPressed: () {},
                   child: Text(
                     "إعادة إرسال الرمز",
-                    style: TextStyle(color: Constants.kAccentYellow),
+                    style: TextStyle(color: AppColors.kAccentYellow),
                   ),
                 ),
               ),
@@ -136,22 +136,22 @@ class _ForgetPasswordState extends State<ForgetPassword> {
             style: TextStyle(
               fontSize: 24,
               fontWeight: FontWeight.bold,
-              color: Constants.kPureWhite,
+              color: AppColors.kPureWhite,
             ),
             decoration: InputDecoration(
               counterText: "",
               filled: true,
-              fillColor: Constants.kCardNavy,
+              fillColor: AppColors.kCardNavy,
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(16),
                 borderSide: BorderSide(
-                  color: Constants.kPrimaryOrange.withValues(alpha: 0.3),
+                  color: AppColors.kPrimaryOrange.withValues(alpha: 0.3),
                 ),
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(16),
                 borderSide: BorderSide(
-                  color: Constants.kPrimaryOrange,
+                  color: AppColors.kPrimaryOrange,
                   width: 2,
                 ),
               ),
