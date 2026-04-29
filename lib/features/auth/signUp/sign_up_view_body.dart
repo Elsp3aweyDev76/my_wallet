@@ -67,7 +67,7 @@ class SignUpViewBody extends StatelessWidget {
                   // GoRouter.of(context).go(kHomeView);
                 },
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Constants.kPrimaryOrange,
+                  backgroundColor: AppColors.kPrimaryOrange,
                   foregroundColor: Colors.white,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(16),
@@ -95,7 +95,7 @@ class SignUpViewBody extends StatelessWidget {
                     child: Text(
                       "Login",
                       style: TextStyle(
-                        color: Constants.kPrimaryOrange,
+                        color: AppColors.kPrimaryOrange,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
