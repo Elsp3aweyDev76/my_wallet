@@ -16,7 +16,10 @@ class LoginPageViewBody extends StatelessWidget {
     // نستخدم Theme.of للحصول على الألوان المتوافقة مع الـ Light/Dark Mode تلقائياً
 
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: knumberOfPadding),
+      padding: const EdgeInsets.symmetric(
+        horizontal: Constants.knumberOfPadding,
+      ),
+      // padding: kTabLabelPadding,
       child: Form(
         key: authCubit.formKey,
         child: CustomScrollView(
@@ -57,13 +60,13 @@ class LoginPageViewBody extends StatelessWidget {
 
                   // --- زر تسجيل الدخول الرئيسي ---
                   CosutmButton(
-                    theColor: Constants.kPrimaryOrange,
+                    theColor: AppColors.kPrimaryOrange,
                     onTap: () {
-                      if (authCubit.formKey.currentState!.validate()) {
-                        authCubit.login();
-                        // GoRouter.of(context).go(kHomeView);
-                      }
-                      // نستخدم .go لكي لا يتمكن المستخدم من العودة لشاشة تسجيل الدخول بعد الدخول
+                      // if (authCubit.formKey.currentState!.validate()) {
+                      //   authCubit.login();
+                      //   // GoRouter.of(context).go(kHomeView);
+                      // }
+                      GoRouter.of(context).go(kHomeView);
                     },
                     title: 'Login',
                   ),
@@ -74,7 +77,7 @@ class LoginPageViewBody extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       const Expanded(child: Divider()),
-                      Text("OR", style: TextStyle(color: AppColors.greyColor)),
+                      Text("OR", style: TextStyle(color: AppColors.kgreyColor)),
                       const Expanded(child: Divider()),
                     ],
                   ),
@@ -105,7 +108,7 @@ class LoginPageViewBody extends StatelessWidget {
                         },
                         child: Text(
                           " SignUp",
-                          style: TextStyle(color: Constants.kPrimaryOrange),
+                          style: TextStyle(color: AppColors.kPrimaryOrange),
                         ),
                       ),
                     ],
