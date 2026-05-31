@@ -16,9 +16,7 @@ class LoginPageViewBody extends StatelessWidget {
     // نستخدم Theme.of للحصول على الألوان المتوافقة مع الـ Light/Dark Mode تلقائياً
 
     return Padding(
-      padding: const EdgeInsets.symmetric(
-        horizontal: Constants.knumberOfPadding,
-      ),
+      padding: EdgeInsets.symmetric(horizontal: AppConstants.knumberOfPadding),
       // padding: kTabLabelPadding,
       child: Form(
         key: authCubit.formKey,
