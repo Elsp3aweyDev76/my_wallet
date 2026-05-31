@@ -1,16 +1,9 @@
 import 'package:flutter/material.dart';
 
-class Constants {
+class AppConstants {
   // constants of colors
   static const knumberOfPadding = 16.0;
   static const kSizeOfIcons = 30.0;
-
-  // constants of colors
-
-  // constants of screens
-  static const kLoginView = '/';
-  static const kForgetPasswordView = '/forgetPassword';
-  static const kHomeView = '/home';
 }
 
 class AppColors {

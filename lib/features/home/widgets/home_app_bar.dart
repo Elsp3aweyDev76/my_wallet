@@ -19,7 +19,7 @@ class HomeAppBar extends StatelessWidget {
           ),
           onPressed: () {},
 
-          icon: Icon(Icons.menu, size: Constants.kSizeOfIcons),
+          icon: Icon(Icons.menu, size: AppConstants.kSizeOfIcons),
         ),
         Text("My Wallet", style: Styles.textStyleBold20),
 
@@ -30,7 +30,7 @@ class HomeAppBar extends StatelessWidget {
             tapTargetSize: MaterialTapTargetSize.shrinkWrap,
           ),
           onPressed: () {},
-          icon: Icon(Icons.notifications, size: Constants.kSizeOfIcons),
+          icon: Icon(Icons.notifications, size: AppConstants.kSizeOfIcons),
         ),
       ],
     );
