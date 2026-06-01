@@ -21,7 +21,7 @@ class HomeAppBar extends StatelessWidget {
 
           icon: Icon(Icons.menu, size: AppConstants.kSizeOfIcons),
         ),
-        Text("My Wallet", style: Styles.textStyleBold20),
+        Text("My Wallet", style: AppStyles.textStyleBold20),
 
         IconButton(
           style: IconButton.styleFrom(

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_wallet/core/constants/constants.dart';
 
-abstract class Styles {
+abstract class AppStyles {
   static const textStyleRegular14 = TextStyle(
     fontSize: 14,
     fontWeight: FontWeight.w400,

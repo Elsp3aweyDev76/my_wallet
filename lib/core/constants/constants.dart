@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 
 class AppConstants {
   // constants of colors
-  static const knumberOfPadding = 16.0;
+  static const knumberOfPadding8 = 8.0;
+  static const knumberOfPadding16 = 16.0;
+  static const knumberOfPadding30 = 30.0;
+  static const knumberOfCirculer = 16.0;
   static const kSizeOfIcons = 30.0;
 }
 

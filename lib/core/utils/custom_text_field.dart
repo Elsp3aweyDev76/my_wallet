@@ -41,8 +41,7 @@ class CustomTextFormField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      
-      style: Styles.textStyleRegular30.copyWith(fontSize: 18),
+      style: AppStyles.textStyleRegular30.copyWith(fontSize: 18),
       onChanged: onChanged,
       controller: controller,
       obscureText: obscureText,
@@ -50,7 +49,7 @@ class CustomTextFormField extends StatelessWidget {
       onSaved: onSaved,
       keyboardType: textType,
       textInputAction: TextInputAction.next,
-    
+
       // التحقق من البيانات
       validator:
           validator ??
@@ -60,21 +59,21 @@ class CustomTextFormField extends StatelessWidget {
             }
             return null;
           },
-    
+
       decoration: InputDecoration(
         // نصوص الحقل
         labelText: thelabel,
         hintText: theHintText,
-        labelStyle: Styles.textStyleRegular30.copyWith(fontSize: 16),
-        hintStyle: Styles.textStyleRegular30.copyWith(
+        labelStyle: AppStyles.textStyleRegular30.copyWith(fontSize: 16),
+        hintStyle: AppStyles.textStyleRegular30.copyWith(
           fontSize: 18,
           color: Colors.grey,
         ),
-    
+
         // الأيقونات (تظهر كما في صورتك الثانية)
         prefixIcon: preffixIcon,
         suffixIcon: suffixIcon,
-    
+
         // التصميم المطلوب: بدون لون خلفية (شفاف)
         filled: filled,
         fillColor: colorOfFill,
@@ -85,11 +84,11 @@ class CustomTextFormField extends StatelessWidget {
           color: const Color.fromARGB(255, 63, 36, 36),
           width: 2,
         ),
-    
+
         // إعدادات حالة الخطأ
         errorBorder: buildBorder(color: Colors.red),
         focusedErrorBorder: buildBorder(color: Colors.red, width: 2),
-    
+
         // تنسيق المسافات الداخلية
         contentPadding: const EdgeInsets.symmetric(
           vertical: 16,
