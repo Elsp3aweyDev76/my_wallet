@@ -14,8 +14,8 @@ class BalanceWidget extends StatelessWidget {
         borderRadius: BorderRadius.circular(20),
       ),
       padding: EdgeInsets.symmetric(
-        vertical: AppConstants.knumberOfPadding,
-        horizontal: AppConstants.knumberOfPadding,
+        vertical: AppConstants.knumberOfPadding16,
+        horizontal: AppConstants.knumberOfPadding16,
       ),
       height: 100,
       width: double.infinity,
@@ -27,13 +27,13 @@ class BalanceWidget extends StatelessWidget {
             children: [
               Text(
                 "the Balance",
-                style: Styles.textStyleBold20.copyWith(
+                style: AppStyles.textStyleBold20.copyWith(
                   fontFamily: AppFonts.kCairoFont,
                 ),
               ),
               Text(
                 "1000.EGP",
-                style: Styles.textStyleRegular20.copyWith(
+                style: AppStyles.textStyleRegular20.copyWith(
                   fontFamily: AppFonts.kCairoFont,
                   fontSize: 25,
                 ),

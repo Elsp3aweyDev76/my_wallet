@@ -23,10 +23,10 @@ class TheCircularPercentIndicator extends StatelessWidget {
       radius: 50.0,
       lineWidth: 12.0,
       percent: percentCircule,
-      footer: Text(theName, style: Styles.textStyleRegular30),
+      footer: Text(theName, style: AppStyles.textStyleRegular30),
       center: Text(
         thePersent,
-        style: Styles.textStyleRegular20.copyWith(
+        style: AppStyles.textStyleRegular20.copyWith(
           fontFamily: AppFonts.kCairoFont,
         ),
       ),
