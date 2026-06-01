@@ -16,8 +16,8 @@ class LoginPageViewBody extends StatelessWidget {
     // نستخدم Theme.of للحصول على الألوان المتوافقة مع الـ Light/Dark Mode تلقائياً
 
     return Padding(
-      padding: const EdgeInsets.symmetric(
-        horizontal: Constants.knumberOfPadding,
+      padding: EdgeInsets.symmetric(
+        horizontal: AppConstants.knumberOfPadding16,
       ),
       // padding: kTabLabelPadding,
       child: Form(
@@ -33,7 +33,7 @@ class LoginPageViewBody extends StatelessWidget {
                   Center(
                     child: Text(
                       "Welcome back",
-                      style: Styles.textStyleRegular30,
+                      style: AppStyles.textStyleRegular30,
                     ),
                   ),
                   const SizedBox(height: 20), // مسافة إضافية تحت العنوان
