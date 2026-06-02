@@ -3,9 +3,7 @@ import 'package:my_wallet/core/constants/constants.dart';
 import 'package:my_wallet/core/constants/styles.dart';
 
 class LabelsTransactions extends StatelessWidget {
-  const LabelsTransactions({
-    super.key,
-  });
+  const LabelsTransactions({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +11,7 @@ class LabelsTransactions extends StatelessWidget {
       child: ListView.builder(
         physics: NeverScrollableScrollPhysics(),
         shrinkWrap: true,
-        itemCount: 3,
+        itemCount: 10,
         itemBuilder: (context, index) {
           return Padding(
             padding: const EdgeInsets.symmetric(
@@ -34,18 +32,15 @@ class LabelsTransactions extends StatelessWidget {
                       right: AppConstants.knumberOfPadding30,
                     ),
                     child: Row(
-                      mainAxisAlignment:
-                          MainAxisAlignment.spaceBetween,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Padding(
                           padding: const EdgeInsets.symmetric(
-                            vertical:
-                                AppConstants.knumberOfPadding8,
+                            vertical: AppConstants.knumberOfPadding8,
                           ),
                           child: Column(
                             spacing: 5,
-                            mainAxisAlignment:
-                                MainAxisAlignment.spaceBetween,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text(
                                 "electricty",

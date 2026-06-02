@@ -18,6 +18,8 @@ class AppColors {
   static const Color kAccentYellow = Color(0xFFFDBB2D);
   static const Color kPureBlackBG = Color(0xFF000000);
   static const Color kCardNavy = Color(0xFF121212);
+  static const Color kCardMoreNavy = Color(0xff221414);
+
   static const Color kPureWhite = Color(0xFFFFFFFF);
   static const Color kTextSecondary = Color(0xFF9E9E9E);
   static const Color kCayanColor = Colors.cyan;
