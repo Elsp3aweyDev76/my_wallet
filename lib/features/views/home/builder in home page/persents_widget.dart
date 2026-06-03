@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_wallet/features/home/widgets/circular_percent_indicator.dart';
+import 'package:my_wallet/features/views/home/widgets/circular_percent_indicator.dart';
 
 class PersentsWidget extends StatelessWidget {
   const PersentsWidget({

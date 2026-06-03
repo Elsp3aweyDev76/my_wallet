@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:my_wallet/core/constants/constants.dart';
 import 'package:my_wallet/core/services/function_of_space.dart';
-import 'package:my_wallet/features/home/builder%20in%20home%20page/balance_widget.dart';
-import 'package:my_wallet/features/home/builder%20in%20home%20page/labels_transactions.dart';
-import 'package:my_wallet/features/home/builder%20in%20home%20page/persents_widget.dart';
-import 'package:my_wallet/features/home/builder%20in%20home%20page/top_expenses.dart';
-import 'package:my_wallet/features/home/widgets/home_app_bar.dart';
+import 'package:my_wallet/features/views/home/builder%20in%20home%20page/balance_widget.dart';
+import 'package:my_wallet/features/views/home/builder%20in%20home%20page/labels_transactions.dart';
+import 'package:my_wallet/features/views/home/builder%20in%20home%20page/persents_widget.dart';
+import 'package:my_wallet/features/views/home/builder%20in%20home%20page/top_expenses.dart';
+import 'package:my_wallet/features/views/home/widgets/home_app_bar.dart';
 
 SafeArea buildBodyOfHome() {
   return SafeArea(

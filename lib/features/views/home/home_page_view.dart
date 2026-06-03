@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:my_wallet/core/constants/constants.dart';
-import 'package:my_wallet/features/home/home_page_view_body.dart';
+import 'package:my_wallet/core/routing/go_router.dart';
+import 'package:my_wallet/features/views/home/home_page_view_body.dart';
 
 class HomePageView extends StatefulWidget {
   const HomePageView({super.key});
@@ -50,7 +52,15 @@ class _HomePageViewState extends State<HomePageView> {
                   _selectedIndex =
                       index; // تحديث الـ index عند الضغط لإعادة بناء الشاشة
                 });
+                if (index == 0) {
+                  context.go(kHomeView);
+                } else if (index == 1) {
+                  context.push(kWalletView); // الانتقال لصفحة المحفظة الجديدة
+                } else if (index == 2) {
+                  context.push(kUserView); // الانتقال لصفحة الحساب الجديدة
+                }
               },
+
               child: Container(
                 // لتوسيع منطقة الضغط وجعل الاستجابة أسهل للمستخدم
                 padding: const EdgeInsets.symmetric(
@@ -93,3 +103,4 @@ class _HomePageViewState extends State<HomePageView> {
     );
   }
 }
+
