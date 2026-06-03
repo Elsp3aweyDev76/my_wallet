@@ -5,13 +5,17 @@ import 'package:my_wallet/features/auth/logic/auth_cubit.dart';
 import 'package:my_wallet/features/auth/login/login_page.dart';
 import 'package:my_wallet/features/auth/login/widget/forget_password.dart';
 import 'package:my_wallet/features/auth/signUp/sign_up.dart';
-import 'package:my_wallet/features/home/home_page_view.dart';
+import 'package:my_wallet/features/views/home/home_page_view.dart';
+import 'package:my_wallet/features/views/userView/user_view.dart';
+import 'package:my_wallet/features/views/wallet_view/wallet_view.dart';
 
 // constants of screens
 const kLoginView = '/';
 const kSignUpView = '/SignUp';
 const kForgetPasswordView = '/forgetPassword';
-const kHomeView = '/home';
+const kHomeView = '/homeView';
+const kUserView = '/userView';
+const kWalletView = '/walletView';
 
 class AppRouter {
   // نقوم بإنشاء الدالة التي تبني الـ Router وتحدد نقطة البداية
@@ -35,6 +39,12 @@ class AppRouter {
           path: kHomeView,
           builder: (context, state) => const HomePageView(),
         ),
+        GoRoute(path: kUserView, builder: (context, state) => const UserView()),
+        GoRoute(
+          path: kWalletView,
+          builder: (context, state) => const WalletView(),
+        ),
+
         GoRoute(
           path: kSignUpView,
           builder: (context, state) => BlocProvider(
