@@ -5,6 +5,6 @@ class UserView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder(child: Text("user view"));
+    return const Scaffold(body: SafeArea(child: Text("user view")));
   }
 }
