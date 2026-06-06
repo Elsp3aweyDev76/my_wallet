@@ -25,18 +25,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // return MaterialApp.router(
-    //   routerConfig: AppRouter.createRouter(true),
-    //   // routerConfig: AppRouter.createRouter(isLoggedIn),
-    //   title: 'myWallet',
-    //   theme: ThemeData(
-    //     brightness: Brightness.dark,
-    //     scaffoldBackgroundColor: Colors.black,
-    //     primaryColor: const Color(0xFFFF6B2C),
-    //   ),
-    //   debugShowCheckedModeBanner: false,
-    //   // home: HomePageView(),
-    // );
     return MaterialApp.router(
       // routerConfig: AppRouter.createRouter(true),
       routerConfig: AppRouter.createRouter(isLoggedIn),

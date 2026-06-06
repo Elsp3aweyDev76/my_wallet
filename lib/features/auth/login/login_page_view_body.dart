@@ -62,11 +62,11 @@ class LoginPageViewBody extends StatelessWidget {
                   CosutmButton(
                     theColor: AppColors.kPrimaryOrange,
                     onTap: () {
-                      // if (authCubit.formKey.currentState!.validate()) {
-                      //   authCubit.login();
-                      //   // GoRouter.of(context).go(kHomeView);
-                      // }
-                      GoRouter.of(context).go(kHomeView);
+                      if (authCubit.formKey.currentState!.validate()) {
+                        authCubit.login();
+                        // GoRouter.of(context).go(kHomeView);
+                      }
+                      // GoRouter.of(context).go(kHomeView);
                     },
                     title: 'Login',
                   ),
