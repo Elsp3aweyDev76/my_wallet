@@ -7,6 +7,7 @@ class CustomTextFormField extends StatelessWidget {
     this.filled = false,
     this.textInputAction,
     this.thelabel,
+    this.onTap,
     this.validator,
     this.preffixIcon,
     this.controller,
@@ -18,6 +19,7 @@ class CustomTextFormField extends StatelessWidget {
     this.onChanged,
     this.obscureText = false,
     this.colorOfFill = Colors.transparent,
+    this.readOnly = false,
     decoration,
     keyboardType,
   });
@@ -29,11 +31,12 @@ class CustomTextFormField extends StatelessWidget {
   final EdgeInsetsGeometry? thePadding;
   final void Function(String?)? onSaved;
   final void Function(String?)? onChanged;
-  final bool obscureText, filled;
+  final bool obscureText, filled, readOnly;
   final TextEditingController? controller;
   final String? thelabel;
   final TextInputAction? textInputAction;
   final Color colorOfFill;
+  final void Function()? onTap;
 
   // التعديل الأساسي: استخدام String? لتمكين إرجاع null عند نجاح التحقق
   final String? Function(String?)? validator;
@@ -41,6 +44,8 @@ class CustomTextFormField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      onTap: onTap,
+      readOnly: readOnly,
       style: AppStyles.textStyleRegular30.copyWith(fontSize: 18),
       onChanged: onChanged,
       controller: controller,

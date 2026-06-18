@@ -6,6 +6,7 @@ import 'package:my_wallet/features/auth/login/login_page.dart';
 import 'package:my_wallet/features/auth/login/widget/forget_password.dart';
 import 'package:my_wallet/features/auth/signUp/sign_up.dart';
 import 'package:my_wallet/features/views/home/home_page_view.dart';
+import 'package:my_wallet/features/views/home/views/transactions_view/transactions_view.dart';
 import 'package:my_wallet/features/views/userView/user_view.dart';
 import 'package:my_wallet/features/views/wallet_view/wallet_view.dart';
 
@@ -16,6 +17,8 @@ const kForgetPasswordView = '/forgetPassword';
 const kHomeView = '/homeView';
 const kUserView = '/userView';
 const kWalletView = '/walletView';
+const kTransationsView="/TransactionsView";
+
 
 class AppRouter {
   // نقوم بإنشاء الدالة التي تبني الـ Router وتحدد نقطة البداية
@@ -37,7 +40,13 @@ class AppRouter {
         ),
         GoRoute(
           path: kHomeView,
-          builder: (context, state) => const HomePageView(),
+          builder: (context, state) => HomePageView(
+            rootContext: context,
+          ),
+        ),
+        GoRoute(
+          path: kTransationsView,
+          builder: (context, state) => const TransactionsView(),
         ),
         GoRoute(path: kUserView, builder: (context, state) => const UserView()),
         GoRoute(
