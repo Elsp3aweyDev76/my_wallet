@@ -1,8 +1,11 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class FireBaseFunction {
   FirebaseAuth auth = FirebaseAuth.instance;
+  FirebaseFirestore firestore = FirebaseFirestore.instance;
   Future<User?> loginUser(String email, String password) async {
     try {
       UserCredential userCredential = await auth.signInWithEmailAndPassword(
@@ -37,5 +40,40 @@ class FireBaseFunction {
       }
     }
     return null;
+  }
+
+  Future<void> addtransection(
+    String userId,
+    String name,
+    String price,
+    String date,
+  ) async {
+    try {
+      await firestore
+          .collection("userTransactin")
+          .doc(userId)
+          .collection("transactions")
+          .add({"name": name, "price": price, "date": date});
+    } on Exception catch (e) {
+      if (kDebugMode) {
+        print(e.toString());
+      }
+    }
+  }
+
+  // دالة حذف معاملة معينة
+  Future<void> deleteTransaction(String userId, String transactionId) async {
+    try {
+      await firestore
+          .collection("userTransactin")
+          .doc(userId)
+          .collection("transactions")
+          .doc(transactionId) // تحديد المعاملة بناءً على الـ ID الفريد لها
+          .delete();
+    } on Exception catch (e) {
+      if (kDebugMode) {
+        print("Error deleting transaction: ${e.toString()}");
+      }
+    }
   }
 }
