@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_wallet/features/views/home/builder%20in%20home%20page/color_of_backgroud.dart';
 
 class AppConstants {
   // constants of colors
@@ -10,6 +11,7 @@ class AppConstants {
 }
 
 class AppColors {
+  static final kColorOfBackGround = colorOfBackgroud();
   static const Color kblackColor = Colors.black;
   static const Color kgreyColor = Colors.grey;
   static const Color kwhiteColor = Colors.white;
