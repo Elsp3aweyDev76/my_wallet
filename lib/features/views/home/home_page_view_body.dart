@@ -4,15 +4,14 @@ import 'package:my_wallet/features/views/home/builder%20in%20home%20page/color_o
 
 class HomePageViewBody extends StatelessWidget {
   const HomePageViewBody({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
       height: double.infinity,
       decoration: BoxDecoration(gradient: colorOfBackgroud()),
-      child: buildBodyOfHome(),
+      child: BodyOhHome(),
     );
   }
-
-
 }

@@ -35,7 +35,6 @@ class AuthCubit extends Cubit<AuthCubitState> {
         emailController.text.trim(),
         passwordController.text.trim(),
       );
-
       // حماية: التأكد أن الكيوبيت مازال يعمل قبل إرسال النجاح أو الفشل
       // if (isClosed) return;
 

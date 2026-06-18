@@ -25,9 +25,13 @@ android {
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
         applicationId = "com.example.my_wallet"
-        // You can update the following values to match your application needs.
-        // For more information, see: https://flutter.dev/to/review-gradle-config.
+
+        // 1️⃣ قمنا برفع الـ minSdk إلى 23 لتفادي مشاكل الفايربيس وتخطي حدود الميثودز
         minSdk = flutter.minSdkVersion
+
+        // 2️⃣ تفعيل الـ multiDex لبيئة Kotlin DSL
+        multiDexEnabled = true
+
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
         versionName = flutter.versionName
